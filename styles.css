@@ -260,6 +260,31 @@ li {
   grid-column: 1 / -1;
 }
 
+.node-cards {
+  display: grid;
+  gap: 12px;
+}
+
+.node-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px;
+  background: var(--panel);
+}
+
+.node-card h3 {
+  margin: 0 0 10px;
+}
+
+.node-card p {
+  margin: 8px 0;
+  color: var(--muted);
+}
+
+code {
+  color: var(--gold);
+}
+
 .footer {
   margin-top: 40px;
   color: var(--muted);

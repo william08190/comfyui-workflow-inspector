@@ -14,6 +14,8 @@ It runs locally in the browser. Workflow JSON is not uploaded anywhere.
 - A compact repair brief you can paste into a developer handoff.
 - A workflow diff page for comparing two JSON files before migrating nodes,
   prompts, timing values, or output paths.
+- A RunningHub output retrieval planner for node ids, `/history/{prompt_id}`
+  lookup paths, `/view` downloads, and preview-node risks.
 
 ## Use It
 
@@ -36,6 +38,10 @@ Workflow diff:
 
 <https://william08190.github.io/comfyui-workflow-inspector/diff.html>
 
+Output retrieval planner:
+
+<https://william08190.github.io/comfyui-workflow-inspector/runninghub.html>
+
 Private setup and workflow repair request:
 
 <https://mv.786668.xyz/service-checkout.html?package=workflow-setup-starter&source=github-inspector>
@@ -50,6 +56,8 @@ miss in a visual graph:
 - Runtime parameters are not connected to cloud workflow inputs.
 - The workflow has several output-like nodes and the API caller picks the wrong
   artifact.
+- The hosted platform returns a task result, but the caller does not map it back
+  to the final ComfyUI node id before downloading.
 
 This tool gives you a quick diagnostic before you pay for hosting, API wiring,
 or workflow repair.

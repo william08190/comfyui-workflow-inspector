@@ -9,6 +9,9 @@ Main page: <https://william08190.github.io/comfyui-workflow-inspector/>
 Workflow diff:
 <https://william08190.github.io/comfyui-workflow-inspector/diff.html>
 
+RunningHub output retrieval planner:
+<https://william08190.github.io/comfyui-workflow-inspector/runninghub.html>
+
 GitHub: <https://github.com/william08190/comfyui-workflow-inspector>
 
 Hosted MV Studio version:
@@ -27,3 +30,7 @@ prompt-bearing nodes, seed fields, model references, and a copyable repair brief
 The workflow diff page compares two workflow JSON files locally and reports added
 nodes, removed nodes, node type changes, changed fields, output node changes, and
 a copyable migration brief.
+
+The RunningHub output retrieval planner identifies preferred final output node
+ids, preview or temp nodes to avoid, ComfyUI `/history/{prompt_id}` lookup paths,
+`/view` download steps, and a copyable hosted retrieval brief.
