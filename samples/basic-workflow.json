@@ -1,0 +1,37 @@
+{
+  "3": {
+    "class_type": "KSampler",
+    "inputs": {
+      "seed": 123456,
+      "steps": 24,
+      "cfg": 6,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "positive": ["6", 0],
+      "negative": ["7", 0],
+      "latent_image": ["5", 0]
+    }
+  },
+  "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "cinematic neon performance, wide shot",
+      "clip": ["4", 1]
+    }
+  },
+  "8": {
+    "class_type": "VHS_VideoCombine",
+    "inputs": {
+      "images": ["3", 0],
+      "frame_rate": 24,
+      "duration": 6,
+      "filename_prefix": "mv-studio-final"
+    }
+  },
+  "9": {
+    "class_type": "PreviewImage",
+    "inputs": {
+      "images": ["3", 0]
+    }
+  }
+}
