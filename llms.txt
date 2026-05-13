@@ -1,0 +1,22 @@
+# ComfyUI Workflow Inspector
+
+ComfyUI Workflow Inspector is a browser-only static tool for inspecting ComfyUI
+UI workflow exports and prompt API JSON before hosting, repairing, or moving a
+workflow to services such as RunningHub, Comfy Cloud, RunPod, or a private API.
+
+Main page: <https://william08190.github.io/comfyui-workflow-inspector/>
+
+GitHub: <https://github.com/william08190/comfyui-workflow-inspector>
+
+Hosted MV Studio version:
+<https://mv.786668.xyz/comfyui-workflow-inspector.html?source=github>
+
+Private workflow setup and repair:
+<https://mv.786668.xyz/comfyui-runninghub-workflow-repair.html?source=github-inspector>
+
+Setup deposit:
+<https://mv.786668.xyz/service-checkout.html?package=workflow-setup-starter&source=github-inspector>
+
+The tool parses JSON locally in the browser and does not upload workflow files.
+It reports output-like nodes, preview-only branches, duration/frame/FPS fields,
+prompt-bearing nodes, seed fields, model references, and a copyable repair brief.
