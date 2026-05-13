@@ -12,6 +12,8 @@ It runs locally in the browser. Workflow JSON is not uploaded anywhere.
 - Preview-only branches that may not create final downloadable assets.
 - Duration, frame, FPS, seed, prompt, and model-related fields.
 - A compact repair brief you can paste into a developer handoff.
+- A workflow diff page for comparing two JSON files before migrating nodes,
+  prompts, timing values, or output paths.
 
 ## Use It
 
@@ -25,6 +27,14 @@ npm run check
 Public hosted version:
 
 <https://mv.786668.xyz/comfyui-workflow-inspector.html?source=github>
+
+GitHub Pages:
+
+<https://william08190.github.io/comfyui-workflow-inspector/>
+
+Workflow diff:
+
+<https://william08190.github.io/comfyui-workflow-inspector/diff.html>
 
 Private setup and workflow repair request:
 

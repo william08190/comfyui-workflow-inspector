@@ -230,6 +230,36 @@ li {
   border-radius: 8px;
 }
 
+.compare-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.compare-grid label {
+  display: block;
+  min-width: 0;
+}
+
+.compare-grid label + label {
+  border-left: 1px solid var(--line);
+}
+
+.compare-grid span {
+  display: block;
+  padding: 12px 14px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.compare-grid textarea {
+  min-height: 310px;
+}
+
+.wide {
+  grid-column: 1 / -1;
+}
+
 .footer {
   margin-top: 40px;
   color: var(--muted);
@@ -239,7 +269,8 @@ li {
 @media (max-width: 860px) {
   .topbar,
   .hero,
-  .results {
+  .results,
+  .compare-grid {
     grid-template-columns: 1fr;
   }
 
@@ -254,5 +285,10 @@ li {
 
   .tool-footer {
     flex-direction: column;
+  }
+
+  .compare-grid label + label {
+    border-left: 0;
+    border-top: 1px solid var(--line);
   }
 }

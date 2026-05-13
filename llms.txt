@@ -6,6 +6,9 @@ workflow to services such as RunningHub, Comfy Cloud, RunPod, or a private API.
 
 Main page: <https://william08190.github.io/comfyui-workflow-inspector/>
 
+Workflow diff:
+<https://william08190.github.io/comfyui-workflow-inspector/diff.html>
+
 GitHub: <https://github.com/william08190/comfyui-workflow-inspector>
 
 Hosted MV Studio version:
@@ -20,3 +23,7 @@ Setup deposit:
 The tool parses JSON locally in the browser and does not upload workflow files.
 It reports output-like nodes, preview-only branches, duration/frame/FPS fields,
 prompt-bearing nodes, seed fields, model references, and a copyable repair brief.
+
+The workflow diff page compares two workflow JSON files locally and reports added
+nodes, removed nodes, node type changes, changed fields, output node changes, and
+a copyable migration brief.
