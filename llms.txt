@@ -15,6 +15,9 @@ RunningHub output retrieval planner:
 Hosted ComfyUI parameter mapper:
 <https://william08190.github.io/comfyui-workflow-inspector/params.html>
 
+ComfyUI custom node dependency scanner:
+<https://william08190.github.io/comfyui-workflow-inspector/dependencies.html>
+
 GitHub: <https://github.com/william08190/comfyui-workflow-inspector>
 
 Hosted MV Studio version:
@@ -41,3 +44,7 @@ ids, preview or temp nodes to avoid, ComfyUI `/history/{prompt_id}` lookup paths
 The parameter mapper identifies prompt, seed, dimension, timing, media upload,
 and model fields that should become hosted API inputs, then generates source
 paths and a copyable integration brief.
+
+The dependency scanner identifies custom node package groups, unknown node
+classes, model/checkpoint references, media file references, ffmpeg-sensitive
+video nodes, and a copyable host setup brief.

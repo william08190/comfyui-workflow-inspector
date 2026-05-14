@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ComfyUI Custom Node Dependency Scanner</title>
+  <meta name="description" content="Scan ComfyUI workflow JSON for custom node packages, missing model assets, media references, and host setup risks before moving a workflow to RunningHub or another ComfyUI API.">
+  <link rel="canonical" href="https://william08190.github.io/comfyui-workflow-inspector/dependencies.html">
+  <meta property="og:title" content="ComfyUI Custom Node Dependency Scanner">
+  <meta property="og:description" content="Find custom node packages, model files, media assets, and setup risks before hosting a ComfyUI workflow.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://william08190.github.io/comfyui-workflow-inspector/dependencies.html">
+  <meta property="og:image" content="https://mv.786668.xyz/assets/examples/workflow-inspector-card.png?v=20260514">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ComfyUI Custom Node Dependency Scanner preview card">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ComfyUI Custom Node Dependency Scanner">
+  <meta name="twitter:description" content="Generate a host setup brief from ComfyUI workflow dependencies.">
+  <meta name="twitter:image" content="https://mv.786668.xyz/assets/examples/workflow-inspector-card.png?v=20260514">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23d8b15f'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-size='24' font-family='Arial' font-weight='700' fill='%230b0906'%3ECW%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand"><span class="mark">CW</span><span>Dependency Scanner</span></div>
+      <nav class="nav" aria-label="Primary">
+        <a href="./">Inspector</a>
+        <a href="./diff.html">Workflow diff</a>
+        <a href="./runninghub.html">Output retrieval</a>
+        <a href="./params.html">Parameter map</a>
+        <a href="https://mv.786668.xyz/comfyui-runninghub-workflow-repair.html?source=github-dependencies">Private repair</a>
+        <a href="https://github.com/william08190/comfyui-workflow-inspector">GitHub</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <h1>Find custom node and asset gaps before hosting ComfyUI.</h1>
+          <p>
+            Paste workflow JSON and generate a host setup brief covering custom
+            node packages, unknown node classes, model files, media references,
+            ffmpeg-sensitive video nodes, and migration risks.
+          </p>
+          <div class="actions">
+            <button class="primary" id="sampleButton" type="button">Load sample scan</button>
+            <a class="button" href="https://mv.786668.xyz/service-checkout.html?package=workflow-setup-starter&source=github-dependencies">Pay setup deposit</a>
+          </div>
+        </div>
+
+        <section class="tool" aria-label="Workflow input">
+          <textarea id="workflowInput" spellcheck="false" placeholder="Paste ComfyUI workflow JSON here"></textarea>
+          <div class="tool-footer">
+            <div class="actions">
+              <button class="primary" id="scanButton" type="button">Scan dependencies</button>
+              <label class="file-button">Load JSON file<input id="workflowFile" type="file" accept=".json,application/json"></label>
+            </div>
+            <div class="status" id="statusBox">Workflow JSON stays local in this browser.</div>
+          </div>
+        </section>
+      </section>
+
+      <section class="results" aria-label="Dependency scan results">
+        <div class="panel">
+          <h2>Summary</h2>
+          <div class="metrics" id="metrics"></div>
+        </div>
+        <div class="panel">
+          <h2>Custom Packages</h2>
+          <div id="packages"></div>
+        </div>
+        <div class="panel wide">
+          <h2>Model and Media Assets</h2>
+          <div id="assets"></div>
+        </div>
+        <div class="panel">
+          <h2>Unknown Nodes</h2>
+          <div id="unknownNodes"></div>
+        </div>
+        <div class="panel">
+          <h2>Risks</h2>
+          <div id="risks"></div>
+        </div>
+        <div class="panel wide">
+          <h2>Setup Brief</h2>
+          <button id="copyButton" type="button">Copy brief</button>
+          <textarea class="brief" id="installBrief" readonly></textarea>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      This is an independent static tool. For private custom node setup,
+      model placement, RunningHub repair, or hosted API setup, use the MV Studio repair links above.
+    </footer>
+  </div>
+
+  <script type="module" src="./src/dependencies.js"></script>
+</body>
+</html>

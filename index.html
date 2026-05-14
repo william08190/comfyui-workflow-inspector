@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ComfyUI Workflow Inspector</title>
-  <meta name="description" content="Inspect ComfyUI workflow JSON locally, find output nodes, preview branches, duration bindings, prompts, seeds, and hosted API repair notes.">
-  <meta name="keywords" content="ComfyUI workflow inspector, ComfyUI JSON, RunningHub workflow repair, hosted ComfyUI API, AI video workflow">
+  <meta name="description" content="Inspect ComfyUI workflow JSON locally, find output nodes, preview branches, duration bindings, prompts, seeds, custom node dependencies, and hosted API repair notes.">
+  <meta name="keywords" content="ComfyUI workflow inspector, ComfyUI JSON, ComfyUI custom nodes, RunningHub workflow repair, hosted ComfyUI API, AI video workflow">
   <link rel="canonical" href="https://william08190.github.io/comfyui-workflow-inspector/">
   <meta property="og:title" content="ComfyUI Workflow Inspector">
   <meta property="og:description" content="Local ComfyUI workflow diagnostics for output retrieval and hosted API repair.">
@@ -30,7 +30,7 @@
       "applicationCategory": "DeveloperApplication",
       "operatingSystem": "Any",
       "url": "https://william08190.github.io/comfyui-workflow-inspector/",
-      "description": "Browser-only ComfyUI workflow JSON inspector for output nodes, preview branches, duration fields, prompts, seeds, and hosted workflow repair notes.",
+      "description": "Browser-only ComfyUI workflow JSON inspector for output nodes, preview branches, duration fields, prompts, seeds, custom node dependencies, and hosted workflow repair notes.",
       "offers": {
         "@type": "Offer",
         "price": "0",
@@ -53,6 +53,7 @@
         <a href="./diff.html">Workflow diff</a>
         <a href="./runninghub.html">Output retrieval</a>
         <a href="./params.html">Parameter map</a>
+        <a href="./dependencies.html">Dependencies</a>
         <a href="https://mv.786668.xyz/comfyui-workflow-inspector.html?source=github">Hosted version</a>
         <a href="https://mv.786668.xyz/comfyui-runninghub-workflow-repair.html?source=github-inspector">Private repair</a>
         <a href="https://github.com/william08190/comfyui-workflow-inspector">GitHub</a>
@@ -66,7 +67,7 @@
           <p>
             Paste a ComfyUI UI export or prompt API JSON. The tool runs in your browser and
             flags output nodes, preview-only branches, duration/FPS fields, prompts, seeds,
-            and repair notes for hosted workflow delivery.
+            custom node dependencies, and repair notes for hosted workflow delivery.
           </p>
           <div class="actions">
             <button class="primary" id="sampleButton" type="button">Load sample</button>
