@@ -16,6 +16,8 @@ It runs locally in the browser. Workflow JSON is not uploaded anywhere.
   prompts, timing values, or output paths.
 - A RunningHub output retrieval planner for node ids, `/history/{prompt_id}`
   lookup paths, `/view` downloads, and preview-node risks.
+- A hosted API parameter mapper for prompt, seed, size, timing, media upload,
+  and model fields that should become runtime inputs.
 
 ## Use It
 
@@ -42,6 +44,10 @@ Output retrieval planner:
 
 <https://william08190.github.io/comfyui-workflow-inspector/runninghub.html>
 
+Parameter mapper:
+
+<https://william08190.github.io/comfyui-workflow-inspector/params.html>
+
 Private setup and workflow repair request:
 
 <https://mv.786668.xyz/service-checkout.html?package=workflow-setup-starter&source=github-inspector>
@@ -54,6 +60,8 @@ miss in a visual graph:
 - The app reads from a preview node instead of the final output node.
 - Duration or FPS is hardcoded in the wrong node.
 - Runtime parameters are not connected to cloud workflow inputs.
+- Prompt, seed, size, duration, or reference media fields are not exposed as
+  hosted API parameters.
 - The workflow has several output-like nodes and the API caller picks the wrong
   artifact.
 - The hosted platform returns a task result, but the caller does not map it back

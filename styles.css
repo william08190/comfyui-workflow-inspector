@@ -169,6 +169,7 @@ textarea {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
   gap: 20px;
+  align-items: start;
   margin-top: 34px;
 }
 

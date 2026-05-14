@@ -12,6 +12,9 @@ Workflow diff:
 RunningHub output retrieval planner:
 <https://william08190.github.io/comfyui-workflow-inspector/runninghub.html>
 
+Hosted ComfyUI parameter mapper:
+<https://william08190.github.io/comfyui-workflow-inspector/params.html>
+
 GitHub: <https://github.com/william08190/comfyui-workflow-inspector>
 
 Hosted MV Studio version:
@@ -34,3 +37,7 @@ a copyable migration brief.
 The RunningHub output retrieval planner identifies preferred final output node
 ids, preview or temp nodes to avoid, ComfyUI `/history/{prompt_id}` lookup paths,
 `/view` download steps, and a copyable hosted retrieval brief.
+
+The parameter mapper identifies prompt, seed, dimension, timing, media upload,
+and model fields that should become hosted API inputs, then generates source
+paths and a copyable integration brief.

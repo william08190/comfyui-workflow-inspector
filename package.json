@@ -5,6 +5,6 @@
   "type": "module",
   "scripts": {
     "test": "node --test tests/*.test.mjs",
-    "check": "node --check src/analyzer.js && node --check src/app.js && node --check src/diffAnalyzer.js && node --check src/diff.js && node --check src/retrievalPlanner.js && node --check src/runninghub.js"
+    "check": "node --check src/analyzer.js && node --check src/app.js && node --check src/diffAnalyzer.js && node --check src/diff.js && node --check src/retrievalPlanner.js && node --check src/runninghub.js && node --check src/parameterMapper.js && node --check src/params.js"
   }
 }
