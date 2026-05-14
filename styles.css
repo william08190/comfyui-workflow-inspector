@@ -153,7 +153,9 @@ textarea {
   font-weight: 700;
 }
 
-input[type="url"] {
+input[type="url"],
+input[type="text"],
+select {
   display: block;
   width: calc(100% - 36px);
   min-height: 42px;
@@ -164,6 +166,10 @@ input[type="url"] {
   color: var(--text);
   background: #0d0c0a;
   font: 13px/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.compact-textarea {
+  min-height: 130px;
 }
 
 .tool-footer {

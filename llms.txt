@@ -21,6 +21,9 @@ ComfyUI custom node dependency scanner:
 ComfyUI API smoke test builder:
 <https://william08190.github.io/comfyui-workflow-inspector/api.html>
 
+ComfyUI workflow repair brief builder:
+<https://william08190.github.io/comfyui-workflow-inspector/repair.html>
+
 GitHub: <https://github.com/william08190/comfyui-workflow-inspector>
 
 Hosted MV Studio version:
@@ -56,3 +59,8 @@ The API smoke test builder identifies the preferred output node, preview-output
 risks, bindable parameters, `/prompt`, `/history/{prompt_id}`, `/view`, and
 websocket endpoints, then generates curl commands and a copyable smoke test
 handoff brief.
+
+The repair brief builder combines workflow JSON and optional failure logs into a
+checkout-ready repair scope covering custom nodes, model and media assets,
+runtime parameters, final output retrieval, hosted API verification, and a
+copyable private setup handoff.
