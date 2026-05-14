@@ -24,6 +24,8 @@ It runs locally in the browser. Workflow JSON is not uploaded anywhere.
   `/view`, websocket progress, curl commands, and handoff evidence.
 - A workflow repair brief builder that combines workflow JSON, optional failure
   logs, dependencies, parameter mapping, output retrieval, and smoke-test scope.
+- A hosted workflow setup quote builder for setup tier, complexity score,
+  dependency scope, runtime inputs, final output evidence, and a checkout brief.
 
 ## Use It
 
@@ -66,6 +68,10 @@ Workflow repair brief builder:
 
 <https://william08190.github.io/comfyui-workflow-inspector/repair.html>
 
+Setup quote builder:
+
+<https://william08190.github.io/comfyui-workflow-inspector/quote.html>
+
 Private setup and workflow repair request:
 
 <https://mv.786668.xyz/service-checkout.html?package=workflow-setup-starter&source=github-inspector>
@@ -91,6 +97,8 @@ miss in a visual graph:
 - The user has an error log but no clean, checkout-ready repair brief that
   describes custom nodes, model files, runtime inputs, retrieval evidence, and
   target platform scope.
+- The client needs a quick setup tier and quote-ready scope before paying a
+  workflow setup deposit.
 
 This tool gives you a quick diagnostic before you pay for hosting, API wiring,
 or workflow repair.

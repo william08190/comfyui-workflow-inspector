@@ -24,6 +24,9 @@ ComfyUI API smoke test builder:
 ComfyUI workflow repair brief builder:
 <https://william08190.github.io/comfyui-workflow-inspector/repair.html>
 
+ComfyUI hosted workflow setup quote builder:
+<https://william08190.github.io/comfyui-workflow-inspector/quote.html>
+
 GitHub: <https://github.com/william08190/comfyui-workflow-inspector>
 
 Hosted MV Studio version:
@@ -64,3 +67,7 @@ The repair brief builder combines workflow JSON and optional failure logs into a
 checkout-ready repair scope covering custom nodes, model and media assets,
 runtime parameters, final output retrieval, hosted API verification, and a
 copyable private setup handoff.
+
+The setup quote builder estimates hosted workflow setup complexity, recommends a
+setup tier, lists score drivers, builds dependency/runtime/output/evidence scope,
+and generates a copyable quote brief with a setup deposit link.
