@@ -20,6 +20,8 @@ It runs locally in the browser. Workflow JSON is not uploaded anywhere.
   and model fields that should become runtime inputs.
 - A custom node dependency scanner for package groups, unknown node classes,
   model files, media references, and host setup risks.
+- A ComfyUI API smoke test builder for `/prompt`, `/history/{prompt_id}`,
+  `/view`, websocket progress, curl commands, and handoff evidence.
 
 ## Use It
 
@@ -54,6 +56,10 @@ Dependency scanner:
 
 <https://william08190.github.io/comfyui-workflow-inspector/dependencies.html>
 
+API smoke test builder:
+
+<https://william08190.github.io/comfyui-workflow-inspector/api.html>
+
 Private setup and workflow repair request:
 
 <https://mv.786668.xyz/service-checkout.html?package=workflow-setup-starter&source=github-inspector>
@@ -70,6 +76,8 @@ miss in a visual graph:
   hosted API parameters.
 - Custom node packs, model files, or media references are missing on the hosted
   ComfyUI machine.
+- The workflow queues successfully, but no one records prompt_id, selected
+  output node id, history response, download URL, or artifact evidence.
 - The workflow has several output-like nodes and the API caller picks the wrong
   artifact.
 - The hosted platform returns a task result, but the caller does not map it back

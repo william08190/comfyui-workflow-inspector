@@ -145,6 +145,27 @@ textarea {
   font: 13px/1.55 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 
+.field-label {
+  display: block;
+  padding: 14px 18px 8px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+input[type="url"] {
+  display: block;
+  width: calc(100% - 36px);
+  min-height: 42px;
+  margin: 0 18px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: var(--text);
+  background: #0d0c0a;
+  font: 13px/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
 .tool-footer {
   display: flex;
   justify-content: space-between;
