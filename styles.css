@@ -126,6 +126,7 @@ button.primary,
 }
 
 .tool {
+  min-width: 0;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: rgba(12, 10, 7, 0.82);
@@ -201,6 +202,7 @@ select {
 }
 
 .panel {
+  min-width: 0;
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 18px;
@@ -220,10 +222,12 @@ select {
 }
 
 .metric {
+  min-width: 0;
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 12px;
   background: var(--panel);
+  overflow-wrap: anywhere;
 }
 
 .metric span {
@@ -294,10 +298,12 @@ li {
 }
 
 .node-card {
+  min-width: 0;
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 14px;
   background: var(--panel);
+  overflow-wrap: anywhere;
 }
 
 .node-card h3 {
@@ -343,5 +349,11 @@ code {
   .compare-grid label + label {
     border-left: 0;
     border-top: 1px solid var(--line);
+  }
+}
+
+@media (max-width: 520px) {
+  .metrics {
+    grid-template-columns: 1fr;
   }
 }

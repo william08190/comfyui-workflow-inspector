@@ -22,6 +22,8 @@ It runs locally in the browser. Workflow JSON is not uploaded anywhere.
   model files, media references, and host setup risks.
 - A ComfyUI API smoke test builder for `/prompt`, `/history/{prompt_id}`,
   `/view`, websocket progress, curl commands, and handoff evidence.
+- A ComfyUI safe share tool for removing API keys, auth headers, local paths,
+  private hosts, emails, and sensitive URL parameters before repair handoff.
 - A ComfyUI failure log triage tool for missing custom nodes, missing models,
   prompt validation errors, GPU memory failures, ffmpeg issues, and hosted API
   retrieval failures.
@@ -67,6 +69,10 @@ API smoke test builder:
 
 <https://william08190.github.io/comfyui-workflow-inspector/api.html>
 
+Workflow safe share:
+
+<https://william08190.github.io/comfyui-workflow-inspector/sanitize.html>
+
 Failure log triage:
 
 <https://william08190.github.io/comfyui-workflow-inspector/logs.html>
@@ -99,6 +105,9 @@ miss in a visual graph:
   output node id, history response, download URL, or artifact evidence.
 - The workflow has several output-like nodes and the API caller picks the wrong
   artifact.
+- A workflow or hosted task log includes API keys, local account paths, private
+  endpoints, emails, or signed URLs that should not be pasted into a public issue
+  or repair request.
 - The hosted task log mentions a missing node, missing model, GPU failure,
   ffmpeg issue, or `/history` output problem, but there is no prioritized repair
   checklist.

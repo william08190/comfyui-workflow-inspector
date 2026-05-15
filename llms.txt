@@ -21,6 +21,9 @@ ComfyUI custom node dependency scanner:
 ComfyUI API smoke test builder:
 <https://william08190.github.io/comfyui-workflow-inspector/api.html>
 
+ComfyUI workflow safe share:
+<https://william08190.github.io/comfyui-workflow-inspector/sanitize.html>
+
 ComfyUI failure log triage:
 <https://william08190.github.io/comfyui-workflow-inspector/logs.html>
 
@@ -65,6 +68,11 @@ The API smoke test builder identifies the preferred output node, preview-output
 risks, bindable parameters, `/prompt`, `/history/{prompt_id}`, `/view`, and
 websocket endpoints, then generates curl commands and a copyable smoke test
 handoff brief.
+
+The safe share tool redacts workflow JSON and logs locally before handoff. It
+removes API keys, authorization headers, provider tokens, sensitive URL query
+parameters, local filesystem paths, private hosts, and email addresses while
+keeping node ids, filenames, model names, and repair context useful.
 
 The failure log triage tool classifies ComfyUI, RunningHub, and hosted API logs
 into missing custom nodes, missing assets, prompt validation, GPU memory,

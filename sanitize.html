@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ComfyUI Workflow Safe Share</title>
+  <meta name="description" content="Redact secrets, local paths, private hosts, and personal metadata from ComfyUI workflow JSON and failure logs before sharing them for repair.">
+  <link rel="canonical" href="https://william08190.github.io/comfyui-workflow-inspector/sanitize.html">
+  <meta property="og:title" content="ComfyUI Workflow Safe Share">
+  <meta property="og:description" content="Generate a sanitized ComfyUI workflow and log package before sending it to a private repair or hosted setup provider.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://william08190.github.io/comfyui-workflow-inspector/sanitize.html">
+  <meta property="og:image" content="https://mv.786668.xyz/assets/examples/workflow-inspector-card.png?v=20260514">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ComfyUI Workflow Safe Share preview card">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ComfyUI Workflow Safe Share">
+  <meta name="twitter:description" content="Redact sensitive workflow and log data locally before repair handoff.">
+  <meta name="twitter:image" content="https://mv.786668.xyz/assets/examples/workflow-inspector-card.png?v=20260514">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23d8b15f'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-size='24' font-family='Arial' font-weight='700' fill='%230b0906'%3ECW%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand"><span class="mark">CW</span><span>Safe Share</span></div>
+      <nav class="nav" aria-label="Primary">
+        <a href="./">Inspector</a>
+        <a href="./diff.html">Workflow diff</a>
+        <a href="./runninghub.html">Output retrieval</a>
+        <a href="./params.html">Parameter map</a>
+        <a href="./dependencies.html">Dependencies</a>
+        <a href="./api.html">API smoke</a>
+        <a href="./sanitize.html">Safe share</a>
+        <a href="./logs.html">Log triage</a>
+        <a href="./repair.html">Repair brief</a>
+        <a href="./quote.html">Setup quote</a>
+        <a href="https://mv.786668.xyz/comfyui-runninghub-workflow-repair.html?source=github-safe-share">Private repair</a>
+        <a href="https://github.com/william08190/comfyui-workflow-inspector">GitHub</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <h1>Redact a ComfyUI workflow before sharing it.</h1>
+          <p>
+            Paste workflow JSON and failure logs. The tool removes API keys,
+            auth headers, local account paths, private endpoints, email addresses,
+            and sensitive URL parameters while keeping node ids, model filenames,
+            and repair context useful.
+          </p>
+          <div class="actions">
+            <button class="primary" id="sampleButton" type="button">Load sample package</button>
+            <a class="button" id="checkoutLink" href="https://mv.786668.xyz/service-checkout.html?package=workflow-setup-starter&source=github-safe-share">Pay repair deposit</a>
+          </div>
+        </div>
+
+        <section class="tool" aria-label="Workflow safe share input">
+          <label class="field-label" for="recipientInput">Target recipient</label>
+          <input id="recipientInput" type="text" value="workflow repair provider" spellcheck="false">
+          <label class="field-label" for="workflowInput">Workflow JSON</label>
+          <textarea id="workflowInput" spellcheck="false" placeholder="Paste ComfyUI workflow JSON or prompt API JSON"></textarea>
+          <label class="field-label" for="logInput">Optional failure log</label>
+          <textarea class="compact-textarea" id="logInput" spellcheck="false" placeholder="Paste traceback, hosted task log, /history response, or handoff notes"></textarea>
+          <div class="tool-footer">
+            <div class="actions">
+              <button class="primary" id="sanitizeButton" type="button">Sanitize package</button>
+              <label class="file-button">Load JSON file<input id="workflowFile" type="file" accept=".json,application/json"></label>
+            </div>
+            <div class="status" id="statusBox">Workflow JSON and logs stay local in this browser.</div>
+          </div>
+        </section>
+      </section>
+
+      <section class="results" aria-label="Workflow safe share results">
+        <div class="panel">
+          <h2>Share Summary</h2>
+          <div class="metrics" id="metrics"></div>
+        </div>
+        <div class="panel">
+          <h2>Redaction Findings</h2>
+          <div id="findings"></div>
+        </div>
+        <div class="panel wide">
+          <h2>Share Checklist</h2>
+          <div id="checklist"></div>
+        </div>
+        <div class="panel wide">
+          <h2>Sanitized Workflow JSON</h2>
+          <textarea class="brief" id="safeWorkflow" readonly></textarea>
+        </div>
+        <div class="panel wide">
+          <h2>Sanitized Log</h2>
+          <textarea class="brief" id="safeLog" readonly></textarea>
+        </div>
+        <div class="panel wide">
+          <h2>Copyable Safe Share Package</h2>
+          <button id="copyButton" type="button">Copy package</button>
+          <textarea class="brief" id="shareBrief" readonly></textarea>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      This is an independent static tool. For private ComfyUI workflow repair,
+      hosted setup, or output retrieval, use the MV Studio repair links above.
+    </footer>
+  </div>
+
+  <script type="module" src="./src/sanitize.js"></script>
+</body>
+</html>
