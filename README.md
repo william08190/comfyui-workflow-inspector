@@ -22,6 +22,9 @@ It runs locally in the browser. Workflow JSON is not uploaded anywhere.
   model files, media references, and host setup risks.
 - A ComfyUI API smoke test builder for `/prompt`, `/history/{prompt_id}`,
   `/view`, websocket progress, curl commands, and handoff evidence.
+- A ComfyUI failure log triage tool for missing custom nodes, missing models,
+  prompt validation errors, GPU memory failures, ffmpeg issues, and hosted API
+  retrieval failures.
 - A workflow repair brief builder that combines workflow JSON, optional failure
   logs, dependencies, parameter mapping, output retrieval, and smoke-test scope.
 - A hosted workflow setup quote builder for setup tier, complexity score,
@@ -64,6 +67,10 @@ API smoke test builder:
 
 <https://william08190.github.io/comfyui-workflow-inspector/api.html>
 
+Failure log triage:
+
+<https://william08190.github.io/comfyui-workflow-inspector/logs.html>
+
 Workflow repair brief builder:
 
 <https://william08190.github.io/comfyui-workflow-inspector/repair.html>
@@ -92,6 +99,9 @@ miss in a visual graph:
   output node id, history response, download URL, or artifact evidence.
 - The workflow has several output-like nodes and the API caller picks the wrong
   artifact.
+- The hosted task log mentions a missing node, missing model, GPU failure,
+  ffmpeg issue, or `/history` output problem, but there is no prioritized repair
+  checklist.
 - The hosted platform returns a task result, but the caller does not map it back
   to the final ComfyUI node id before downloading.
 - The user has an error log but no clean, checkout-ready repair brief that
