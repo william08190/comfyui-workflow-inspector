@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ComfyUI Workflow Asset Manifest Builder</title>
+  <meta name="description" content="Build a hosted ComfyUI asset manifest from workflow JSON, covering model files, LoRAs, VAEs, input media, host folders, upload steps, and acceptance checks.">
+  <link rel="canonical" href="https://william08190.github.io/comfyui-workflow-inspector/assets.html">
+  <meta property="og:title" content="ComfyUI Workflow Asset Manifest Builder">
+  <meta property="og:description" content="Turn ComfyUI workflow JSON into a model, media, and hosted setup asset manifest.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://william08190.github.io/comfyui-workflow-inspector/assets.html">
+  <meta property="og:image" content="https://mv.786668.xyz/assets/examples/workflow-inspector-card.png?v=20260514">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ComfyUI Workflow Asset Manifest Builder preview card">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ComfyUI Workflow Asset Manifest Builder">
+  <meta name="twitter:description" content="Create a hosted ComfyUI model and media transfer checklist from workflow JSON.">
+  <meta name="twitter:image" content="https://mv.786668.xyz/assets/examples/workflow-inspector-card.png?v=20260514">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23d8b15f'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-size='24' font-family='Arial' font-weight='700' fill='%230b0906'%3ECW%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand"><span class="mark">CW</span><span>Asset Manifest</span></div>
+      <nav class="nav" aria-label="Primary">
+        <a href="./">Inspector</a>
+        <a href="./diff.html">Workflow diff</a>
+        <a href="./runninghub.html">Output retrieval</a>
+        <a href="./history.html">History artifacts</a>
+        <a href="./params.html">Parameter map</a>
+        <a href="./dependencies.html">Dependencies</a>
+        <a href="./assets.html">Asset manifest</a>
+        <a href="./api.html">API smoke</a>
+        <a href="./sanitize.html">Safe share</a>
+        <a href="./logs.html">Log triage</a>
+        <a href="./repair.html">Repair brief</a>
+        <a href="./quote.html">Setup quote</a>
+        <a href="./handoff.html">Deployment handoff</a>
+        <a href="https://mv.786668.xyz/comfyui-runninghub-workflow-repair.html?source=github-asset-manifest">Private repair</a>
+        <a href="https://github.com/william08190/comfyui-workflow-inspector">GitHub</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <h1>Build the model and media manifest before hosted setup.</h1>
+          <p>
+            Paste workflow JSON and generate a transfer-ready asset manifest:
+            model folders, input media uploads, config files, placement checks,
+            acceptance evidence, and a copyable setup brief.
+          </p>
+          <div class="actions">
+            <button class="primary" id="sampleButton" type="button">Load sample manifest</button>
+            <a class="button" href="https://mv.786668.xyz/service-checkout.html?package=workflow-setup-starter&source=github-asset-manifest">Pay setup deposit</a>
+          </div>
+        </div>
+
+        <section class="tool" aria-label="Asset manifest input">
+          <textarea id="workflowInput" spellcheck="false" placeholder="Paste ComfyUI workflow JSON here"></textarea>
+          <div class="tool-footer">
+            <div class="actions">
+              <button class="primary" id="buildButton" type="button">Build manifest</button>
+              <label class="file-button">Load JSON file<input id="workflowFile" type="file" accept=".json,application/json"></label>
+            </div>
+            <div class="status" id="statusBox">Workflow JSON stays local in this browser.</div>
+          </div>
+        </section>
+      </section>
+
+      <section class="results" aria-label="Asset manifest results">
+        <div class="panel">
+          <h2>Summary</h2>
+          <div class="metrics" id="metrics"></div>
+        </div>
+        <div class="panel">
+          <h2>Host Folders</h2>
+          <div id="folders"></div>
+        </div>
+        <div class="panel wide">
+          <h2>Asset Entries</h2>
+          <div id="assets"></div>
+        </div>
+        <div class="panel">
+          <h2>Upload Checklist</h2>
+          <div id="uploads"></div>
+        </div>
+        <div class="panel">
+          <h2>Verification</h2>
+          <div id="verification"></div>
+        </div>
+        <div class="panel">
+          <h2>Risks</h2>
+          <div id="risks"></div>
+        </div>
+        <div class="panel">
+          <h2>Manifest JSON</h2>
+          <button id="copyJsonButton" type="button">Copy JSON</button>
+          <textarea class="brief" id="manifestJson" readonly></textarea>
+        </div>
+        <div class="panel wide">
+          <h2>Asset Handoff Brief</h2>
+          <button id="copyBriefButton" type="button">Copy brief</button>
+          <textarea class="brief" id="manifestBrief" readonly></textarea>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      This is an independent static tool. For private model placement, media upload,
+      RunningHub repair, or hosted API setup, use the MV Studio repair links above.
+    </footer>
+  </div>
+
+  <script type="module" src="./src/assets.js"></script>
+</body>
+</html>

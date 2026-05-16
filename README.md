@@ -22,6 +22,8 @@ It runs locally in the browser. Workflow JSON is not uploaded anywhere.
   and model fields that should become runtime inputs.
 - A custom node dependency scanner for package groups, unknown node classes,
   model files, media references, and host setup risks.
+- A workflow asset manifest builder for model folders, LoRAs, VAEs, input media,
+  upload steps, host placement checks, and acceptance evidence.
 - A ComfyUI API smoke test builder for `/prompt`, `/history/{prompt_id}`,
   `/view`, websocket progress, curl commands, and handoff evidence.
 - A ComfyUI safe share tool for removing API keys, auth headers, local paths,
@@ -73,6 +75,10 @@ Dependency scanner:
 
 <https://william08190.github.io/comfyui-workflow-inspector/dependencies.html>
 
+Asset manifest builder:
+
+<https://william08190.github.io/comfyui-workflow-inspector/assets.html>
+
 API smoke test builder:
 
 <https://william08190.github.io/comfyui-workflow-inspector/api.html>
@@ -113,6 +119,8 @@ miss in a visual graph:
   hosted API parameters.
 - Custom node packs, model files, or media references are missing on the hosted
   ComfyUI machine.
+- Required model files, LoRAs, VAEs, IP-Adapter files, or input media are not
+  collected into a host-ready asset manifest before setup begins.
 - The workflow queues successfully, but no one records prompt_id, selected
   output node id, history response, download URL, or artifact evidence.
 - The workflow has several output-like nodes and the API caller picks the wrong
@@ -143,3 +151,7 @@ The deployment handoff builder combines dependency, parameter, output retrieval,
 and smoke-test checks into a hosted workflow delivery package covering setup
 steps, runtime inputs, output contracts, acceptance evidence, client files, and
 a copyable handoff brief.
+
+The asset manifest builder turns workflow JSON into a host folder map for model
+files and input media, plus upload steps, placement checks, verification
+evidence, JSON manifest output, and a copyable setup handoff.

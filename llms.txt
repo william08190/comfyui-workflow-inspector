@@ -21,6 +21,9 @@ Hosted ComfyUI parameter mapper:
 ComfyUI custom node dependency scanner:
 <https://william08190.github.io/comfyui-workflow-inspector/dependencies.html>
 
+ComfyUI workflow asset manifest builder:
+<https://william08190.github.io/comfyui-workflow-inspector/assets.html>
+
 ComfyUI API smoke test builder:
 <https://william08190.github.io/comfyui-workflow-inspector/api.html>
 
@@ -74,6 +77,10 @@ paths and a copyable integration brief.
 The dependency scanner identifies custom node package groups, unknown node
 classes, model/checkpoint references, media file references, ffmpeg-sensitive
 video nodes, and a copyable host setup brief.
+
+The asset manifest builder turns workflow JSON into a host-ready model and media
+manifest, including folder placement, media upload steps, verification checks,
+JSON output, and a copyable setup handoff.
 
 The API smoke test builder identifies the preferred output node, preview-output
 risks, bindable parameters, `/prompt`, `/history/{prompt_id}`, `/view`, and
