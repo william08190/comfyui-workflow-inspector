@@ -16,6 +16,8 @@ It runs locally in the browser. Workflow JSON is not uploaded anywhere.
   prompts, timing values, or output paths.
 - A RunningHub output retrieval planner for node ids, `/history/{prompt_id}`
   lookup paths, `/view` downloads, and preview-node risks.
+- A ComfyUI history artifact extractor for final artifact URLs, output node
+  evidence, preview/temp risks, and curl download commands from `/history`.
 - A hosted API parameter mapper for prompt, seed, size, timing, media upload,
   and model fields that should become runtime inputs.
 - A custom node dependency scanner for package groups, unknown node classes,
@@ -56,6 +58,10 @@ Workflow diff:
 Output retrieval planner:
 
 <https://william08190.github.io/comfyui-workflow-inspector/runninghub.html>
+
+History artifact extractor:
+
+<https://william08190.github.io/comfyui-workflow-inspector/history.html>
 
 Parameter mapper:
 
@@ -113,6 +119,8 @@ miss in a visual graph:
   checklist.
 - The hosted platform returns a task result, but the caller does not map it back
   to the final ComfyUI node id before downloading.
+- The raw `/history/{prompt_id}` response contains several files, but the final
+  downloadable artifact is mixed with temp previews or debug outputs.
 - The user has an error log but no clean, checkout-ready repair brief that
   describes custom nodes, model files, runtime inputs, retrieval evidence, and
   target platform scope.
