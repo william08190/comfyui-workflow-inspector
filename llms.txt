@@ -36,6 +36,9 @@ ComfyUI workflow repair brief builder:
 ComfyUI hosted workflow setup quote builder:
 <https://william08190.github.io/comfyui-workflow-inspector/quote.html>
 
+ComfyUI deployment handoff builder:
+<https://william08190.github.io/comfyui-workflow-inspector/handoff.html>
+
 GitHub: <https://github.com/william08190/comfyui-workflow-inspector>
 
 Hosted MV Studio version:
@@ -96,3 +99,8 @@ copyable private setup handoff.
 The setup quote builder estimates hosted workflow setup complexity, recommends a
 setup tier, lists score drivers, builds dependency/runtime/output/evidence scope,
 and generates a copyable quote brief with a setup deposit link.
+
+The deployment handoff builder combines dependency, parameter, retrieval, and
+API smoke-test checks into setup steps, runtime input maps, output contracts,
+acceptance evidence, client delivery files, and a copyable hosted workflow
+handoff brief.

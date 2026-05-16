@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ComfyUI Deployment Handoff Builder</title>
+  <meta name="description" content="Build a hosted ComfyUI deployment handoff with setup steps, runtime inputs, output retrieval, acceptance evidence, and client delivery files.">
+  <link rel="canonical" href="https://william08190.github.io/comfyui-workflow-inspector/handoff.html">
+  <meta property="og:title" content="ComfyUI Deployment Handoff Builder">
+  <meta property="og:description" content="Turn workflow JSON into a hosted ComfyUI setup and acceptance handoff for RunningHub, RunPod, and private APIs.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://william08190.github.io/comfyui-workflow-inspector/handoff.html">
+  <meta property="og:image" content="https://mv.786668.xyz/assets/examples/workflow-inspector-card.png?v=20260514">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ComfyUI Deployment Handoff Builder preview card">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ComfyUI Deployment Handoff Builder">
+  <meta name="twitter:description" content="Generate setup steps, runtime input maps, output contracts, and acceptance evidence for hosted ComfyUI delivery.">
+  <meta name="twitter:image" content="https://mv.786668.xyz/assets/examples/workflow-inspector-card.png?v=20260514">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23d8b15f'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-size='24' font-family='Arial' font-weight='700' fill='%230b0906'%3ECW%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand"><span class="mark">CW</span><span>Deployment Handoff</span></div>
+      <nav class="nav" aria-label="Primary">
+        <a href="./">Inspector</a>
+        <a href="./diff.html">Workflow diff</a>
+        <a href="./runninghub.html">Output retrieval</a>
+        <a href="./history.html">History artifacts</a>
+        <a href="./params.html">Parameter map</a>
+        <a href="./dependencies.html">Dependencies</a>
+        <a href="./api.html">API smoke</a>
+        <a href="./sanitize.html">Safe share</a>
+        <a href="./logs.html">Log triage</a>
+        <a href="./repair.html">Repair brief</a>
+        <a href="./quote.html">Setup quote</a>
+        <a href="./handoff.html">Deployment handoff</a>
+        <a href="https://mv.786668.xyz/comfyui-runninghub-workflow-repair.html?source=github-handoff">Private repair</a>
+        <a href="https://github.com/william08190/comfyui-workflow-inspector">GitHub</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <h1>Build a hosted workflow handoff before deployment.</h1>
+          <p>
+            Paste workflow JSON and generate host setup steps, runtime input
+            mapping, final output contracts, acceptance evidence, delivery files,
+            and a copyable handoff brief for RunningHub, RunPod, or private APIs.
+          </p>
+          <div class="actions">
+            <button class="primary" id="sampleButton" type="button">Load sample handoff</button>
+            <a class="button" href="https://mv.786668.xyz/service-checkout.html?package=workflow-setup-starter&source=github-handoff">Pay setup deposit</a>
+          </div>
+        </div>
+
+        <section class="tool" aria-label="Deployment handoff input">
+          <label class="field-label" for="platformInput">Target platform</label>
+          <select id="platformInput">
+            <option value="runninghub">RunningHub or hosted workflow wrapper</option>
+            <option value="comfyui">Self-hosted ComfyUI</option>
+            <option value="runpod">RunPod ComfyUI endpoint</option>
+            <option value="cloud">Generic hosted ComfyUI API</option>
+          </select>
+          <label class="field-label" for="baseUrlInput">ComfyUI base URL</label>
+          <input id="baseUrlInput" type="url" value="http://127.0.0.1:8188" spellcheck="false">
+          <textarea id="workflowInput" spellcheck="false" placeholder="Paste ComfyUI workflow JSON here"></textarea>
+          <div class="tool-footer">
+            <div class="actions">
+              <button class="primary" id="buildButton" type="button">Build handoff</button>
+              <label class="file-button">Load JSON file<input id="workflowFile" type="file" accept=".json,application/json"></label>
+            </div>
+            <div class="status" id="statusBox">Workflow JSON stays local in this browser.</div>
+          </div>
+        </section>
+      </section>
+
+      <section class="results" aria-label="Deployment handoff results">
+        <div class="panel">
+          <h2>Summary</h2>
+          <div class="metrics" id="metrics"></div>
+        </div>
+        <div class="panel">
+          <h2>Host Setup</h2>
+          <div id="setup"></div>
+        </div>
+        <div class="panel wide">
+          <h2>Runtime Inputs</h2>
+          <div id="inputs"></div>
+        </div>
+        <div class="panel wide">
+          <h2>Output Contract</h2>
+          <div id="output"></div>
+        </div>
+        <div class="panel">
+          <h2>Acceptance Evidence</h2>
+          <div id="evidence"></div>
+        </div>
+        <div class="panel">
+          <h2>Client Files</h2>
+          <div id="files"></div>
+        </div>
+        <div class="panel wide">
+          <h2>Risks</h2>
+          <div id="risks"></div>
+        </div>
+        <div class="panel wide">
+          <h2>Deployment Handoff Brief</h2>
+          <button id="copyButton" type="button">Copy brief</button>
+          <textarea class="brief" id="handoffBrief" readonly></textarea>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      This is an independent static tool. For private hosted workflow setup,
+      delivery docs, or ComfyUI repair, use the MV Studio repair links above.
+    </footer>
+  </div>
+
+  <script type="module" src="./src/handoff.js"></script>
+</body>
+</html>

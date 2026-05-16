@@ -33,6 +33,8 @@ It runs locally in the browser. Workflow JSON is not uploaded anywhere.
   logs, dependencies, parameter mapping, output retrieval, and smoke-test scope.
 - A hosted workflow setup quote builder for setup tier, complexity score,
   dependency scope, runtime inputs, final output evidence, and a checkout brief.
+- A deployment handoff builder for hosted setup steps, runtime inputs, output
+  retrieval contracts, acceptance evidence, and client delivery files.
 
 ## Use It
 
@@ -91,6 +93,10 @@ Setup quote builder:
 
 <https://william08190.github.io/comfyui-workflow-inspector/quote.html>
 
+Deployment handoff builder:
+
+<https://william08190.github.io/comfyui-workflow-inspector/handoff.html>
+
 Private setup and workflow repair request:
 
 <https://mv.786668.xyz/service-checkout.html?package=workflow-setup-starter&source=github-inspector>
@@ -126,6 +132,14 @@ miss in a visual graph:
   target platform scope.
 - The client needs a quick setup tier and quote-ready scope before paying a
   workflow setup deposit.
+- The delivery handoff is missing setup steps, runtime input paths, final output
+  node ids, acceptance evidence, and the files needed to verify production
+  deployment.
 
 This tool gives you a quick diagnostic before you pay for hosting, API wiring,
 or workflow repair.
+
+The deployment handoff builder combines dependency, parameter, output retrieval,
+and smoke-test checks into a hosted workflow delivery package covering setup
+steps, runtime inputs, output contracts, acceptance evidence, client files, and
+a copyable handoff brief.
