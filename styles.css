@@ -249,6 +249,7 @@ ul {
 li {
   margin: 8px 0;
   color: var(--text);
+  overflow-wrap: anywhere;
 }
 
 .muted {

@@ -15,6 +15,9 @@ RunningHub output retrieval planner:
 ComfyUI history artifact extractor:
 <https://william08190.github.io/comfyui-workflow-inspector/history.html>
 
+ComfyUI acceptance evidence builder:
+<https://william08190.github.io/comfyui-workflow-inspector/evidence.html>
+
 Hosted ComfyUI parameter mapper:
 <https://william08190.github.io/comfyui-workflow-inspector/params.html>
 
@@ -69,6 +72,10 @@ The history artifact extractor parses completed ComfyUI `/history` JSON,
 extracts downloadable image/video/audio artifacts, builds `/view` URLs and curl
 commands, flags preview or temp files, and generates a copyable output evidence
 brief.
+
+The acceptance evidence builder combines workflow JSON and `/history` output
+into a final deliverable list, preview exclusion notes, curl commands, delivery
+files, and a copyable client signoff report.
 
 The parameter mapper identifies prompt, seed, dimension, timing, media upload,
 and model fields that should become hosted API inputs, then generates source

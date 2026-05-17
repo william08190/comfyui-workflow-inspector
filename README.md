@@ -18,6 +18,9 @@ It runs locally in the browser. Workflow JSON is not uploaded anywhere.
   lookup paths, `/view` downloads, and preview-node risks.
 - A ComfyUI history artifact extractor for final artifact URLs, output node
   evidence, preview/temp risks, and curl download commands from `/history`.
+- An acceptance evidence builder for client-ready signoff reports from workflow
+  JSON, `/history` output, final deliverables, preview exclusions, and delivery
+  files.
 - A hosted API parameter mapper for prompt, seed, size, timing, media upload,
   and model fields that should become runtime inputs.
 - A custom node dependency scanner for package groups, unknown node classes,
@@ -66,6 +69,10 @@ Output retrieval planner:
 History artifact extractor:
 
 <https://william08190.github.io/comfyui-workflow-inspector/history.html>
+
+Acceptance evidence builder:
+
+<https://william08190.github.io/comfyui-workflow-inspector/evidence.html>
 
 Parameter mapper:
 
@@ -135,6 +142,8 @@ miss in a visual graph:
   to the final ComfyUI node id before downloading.
 - The raw `/history/{prompt_id}` response contains several files, but the final
   downloadable artifact is mixed with temp previews or debug outputs.
+- The client needs a clean acceptance report proving prompt id, completed
+  history, final output node, downloaded artifact, and excluded preview files.
 - The user has an error log but no clean, checkout-ready repair brief that
   describes custom nodes, model files, runtime inputs, retrieval evidence, and
   target platform scope.
@@ -151,6 +160,10 @@ The deployment handoff builder combines dependency, parameter, output retrieval,
 and smoke-test checks into a hosted workflow delivery package covering setup
 steps, runtime inputs, output contracts, acceptance evidence, client files, and
 a copyable handoff brief.
+
+The acceptance evidence builder combines workflow JSON and `/history` output
+into an outcome, final deliverable list, preview exclusion notes, download
+commands, delivery files, and a copyable customer acceptance report.
 
 The asset manifest builder turns workflow JSON into a host folder map for model
 files and input media, plus upload steps, placement checks, verification
