@@ -45,6 +45,9 @@ ComfyUI hosted workflow setup quote builder:
 ComfyUI deployment handoff builder:
 <https://william08190.github.io/comfyui-workflow-inspector/handoff.html>
 
+ComfyUI support intake packet builder:
+<https://william08190.github.io/comfyui-workflow-inspector/intake.html>
+
 GitHub: <https://github.com/william08190/comfyui-workflow-inspector>
 
 Hosted MV Studio version:
@@ -118,3 +121,7 @@ The deployment handoff builder combines dependency, parameter, retrieval, and
 API smoke-test checks into setup steps, runtime input maps, output contracts,
 acceptance evidence, client delivery files, and a copyable hosted workflow
 handoff brief.
+
+The support intake packet builder combines workflow JSON, failure notes, target
+platform, optional history output, assets, runtime inputs, missing evidence,
+open questions, blockers, checkout link, and a copyable paid setup request.

@@ -40,6 +40,8 @@ It runs locally in the browser. Workflow JSON is not uploaded anywhere.
   dependency scope, runtime inputs, final output evidence, and a checkout brief.
 - A deployment handoff builder for hosted setup steps, runtime inputs, output
   retrieval contracts, acceptance evidence, and client delivery files.
+- A support intake packet builder for pre-payment attachments, missing evidence,
+  open questions, blockers, final output proof, and checkout-ready scope.
 
 ## Use It
 
@@ -110,6 +112,10 @@ Deployment handoff builder:
 
 <https://william08190.github.io/comfyui-workflow-inspector/handoff.html>
 
+Support intake packet builder:
+
+<https://william08190.github.io/comfyui-workflow-inspector/intake.html>
+
 Private setup and workflow repair request:
 
 <https://mv.786668.xyz/service-checkout.html?package=workflow-setup-starter&source=github-inspector>
@@ -152,6 +158,9 @@ miss in a visual graph:
 - The delivery handoff is missing setup steps, runtime input paths, final output
   node ids, acceptance evidence, and the files needed to verify production
   deployment.
+- The customer is ready to ask for help, but has not packaged workflow JSON,
+  logs, model assets, target platform, history output, open questions, and
+  acceptance evidence into one support request.
 
 This tool gives you a quick diagnostic before you pay for hosting, API wiring,
 or workflow repair.
@@ -168,3 +177,8 @@ commands, delivery files, and a copyable customer acceptance report.
 The asset manifest builder turns workflow JSON into a host folder map for model
 files and input media, plus upload steps, placement checks, verification
 evidence, JSON manifest output, and a copyable setup handoff.
+
+The support intake packet builder combines workflow JSON, failure notes, target
+platform, optional `/history` output, dependency and asset scans, runtime inputs,
+quote tier, missing evidence, and final output proof into a checkout-ready
+support request.
