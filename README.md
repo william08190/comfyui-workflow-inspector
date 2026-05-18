@@ -120,6 +120,19 @@ Private setup and workflow repair request:
 
 <https://mv.786668.xyz/service-checkout.html?package=workflow-setup-starter&source=github-inspector>
 
+## Support
+
+This project is maintained as a free browser tool for ComfyUI workflow
+diagnostics, hosted workflow setup planning, and workflow repair handoffs.
+
+Optional support page:
+
+<https://ko-fi.com/william47356>
+
+Support helps keep the public inspector pages and related workflow setup notes
+available. Paid private workflow setup still goes through the MV Studio service
+request links above.
+
 ## Why This Exists
 
 Hosted ComfyUI deployments often fail for practical reasons that are easy to
