@@ -42,6 +42,8 @@ It runs locally in the browser. Workflow JSON is not uploaded anywhere.
   retrieval contracts, acceptance evidence, and client delivery files.
 - A support intake packet builder for pre-payment attachments, missing evidence,
   open questions, blockers, final output proof, and checkout-ready scope.
+- A support page that collects the setup deposit, private repair intake, public
+  proof links, and optional Ko-fi support link.
 
 ## Use It
 
@@ -115,6 +117,10 @@ Deployment handoff builder:
 Support intake packet builder:
 
 <https://william08190.github.io/comfyui-workflow-inspector/intake.html>
+
+Support and setup links:
+
+<https://william08190.github.io/comfyui-workflow-inspector/support.html>
 
 Private setup and workflow repair request:
 

@@ -48,6 +48,9 @@ ComfyUI deployment handoff builder:
 ComfyUI support intake packet builder:
 <https://william08190.github.io/comfyui-workflow-inspector/intake.html>
 
+ComfyUI workflow support links:
+<https://william08190.github.io/comfyui-workflow-inspector/support.html>
+
 GitHub: <https://github.com/william08190/comfyui-workflow-inspector>
 
 Hosted MV Studio version:
@@ -125,3 +128,7 @@ handoff brief.
 The support intake packet builder combines workflow JSON, failure notes, target
 platform, optional history output, assets, runtime inputs, missing evidence,
 open questions, blockers, checkout link, and a copyable paid setup request.
+
+The support page collects the setup deposit, private repair intake, billing,
+public proof, GitHub profile, and optional Ko-fi support links in one static
+entrypoint.
